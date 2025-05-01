@@ -117,5 +117,70 @@
 3) Testability analysis and Test Pattern Generation
    - Required for testing the manufactured devices
   
+## 📝 1.6: Design Representation
 
+- A design can be represented at various levels from three different points of view.
+  1) Behavioral - Programs, Specifications, Truth Table
+  2) Structural - Gates, Adders, Registers
+  3) Physical - Transistors/Layouts, Cells, Chips/Boards
+- Can be conveniently expressed by Y Diagram
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/9edac829-2c7f-4bb5-968a-801c5ba6ae82" width="200">
+</div>
+
+1) Behavioral Representation:
+   - Specifies how a particular design should respond to a given set of inputs
+   - May be specified by:
+     - Boolean Equations
+     - Tables of input and output values
+     - Algorithms written in standard HLL like C
+     - Algorithms written in special HDL like Verilog or VHDL
+   - Example: Full Adder
+     - Two operand inputs A and B
+     - A carry input C
+     - A carry output Cy
+     - A sum output S
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/cfcf9f61-be41-4a5a-8c64-35e24df08ffe" width="100">
+</div>
+Boolean Expression:
+
+     S = AB′C′ + A′B′C + A′BC′ + ABC = A ⨁ B ⨁ C
+     Cy = AB + AC + BC
+
+2) Structural Representation
+   * Specifies how components are interconnected
+   * In general, the description is a list of modules and their interconnections is called netlist. It can be specified at various levels.
+   * At the structural level, the levels of abstraction are: Functional level, Gate level, Transistor level, Any combination of these.
+   * In each successive level more detail is revealed about the implementation.
+   * Example: A 4-bit Ripple Carry Adder
+     - Consist of four full adders
+     - Each full adder consists of a sum circuit and a carry circuit.
+     - We instantiate carry and sum circuit to create a full adder. Then we instantiate four full adders to create the 4-bit adder.
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/ebf7f57b-27ac-46b2-8906-e2be896a8c54" width="300">
+</div>
+     
+3) Physical Representation
+   * Lowest level of physical specification
+   * Photo mask information required by various processing steps in fabrication process
+   * At module level, the physical layout for 4 bit adder may be defined by a rectangle/polygon, and collection of ports
+   * At layout level, there can be large no. of rectangles or polygons.
+
+## 📝 1.7: Digital IC Design Flow
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/664eeddc-4396-4fd2-8307-5ea5803cd263" width="400">
+</div>
+
+---
+
+
+
+
+
+  
   
