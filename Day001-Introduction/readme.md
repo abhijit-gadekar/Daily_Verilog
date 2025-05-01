@@ -68,4 +68,54 @@
   13) Packaging and testing:-
       * After the fabrication process we test the chip.If there is any fault in the design then we modify the design by repeating the above steps.
       * If there are no faults then chip will go to packaging.
+
+## 📝 1.4: Use of CAD Tools
+
+- They are based on Hardware Description Languages. HDLs provide formats for representing outputs of various design steps.
+- A CAD Tool transforms its HDL input into a HDL output that contains more detailed information about the hardware
+  - Behavioral Level to Register Transfer Level
+  - Register Transfer Level to Gate Level
+  - Gate Level to Transistor Level
+  - Transistor Level to Layout Level
+- E.g. of HDLs: Verilog, VHDL, SystemC, SystemVerilog, etc.
+
+## 📝 1.5: Steps of the Design Flow
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/16a98ade-4090-4339-9a38-032efcc8eb36" width="300">
+</div>
+
+1) Behavioral Design:
+   * Can be pseudo code in a hardware description language or a flow graph notation
+   * Specifies functionality of design in terms of its behavior using Boolean Expressions, Truth Table, FSM (Finite State Machine) Behavior, and high level algorithm
+   * Needs to be synthesized into more detailed specifications for hardwaee realization.
+
+2) Data Path Design:
+   * It generates a netlist of register transfer level components like registers, adders, multipliers, multiplexers, decoders, etc.
+   * A netlist is a directed graph where vertices indicate components and edges indicate interconnections. A netlist specification is also referred as structural design.
+   * Netlist may be specified at various levels where components may be functional modules, gates or transistors. It is systematically transformed from one level to the next.
+
+3) Logic Design
+   * Generates a netlist of gates, flip-flops, or standard cells
+   * A standard cell is pre-designed circuit module (like gates, flip-flops, multiplexers, etc) at layout level
+   * Various logic optimization techniques are used to obtain a cost effective design
+   * There may be conflicting requirements during optimization:
+     * Minimize number of gates
+     * Minimize number of gate levels (delays)
+     * Minimize signal transition activites (i.e. dynamic power)
+
+4) Physical Design and Manufacturing
+   * Generate the final layout that can be sent for fabrication
+   * The layout contains a large number of regular geometric shapes corresponding to different fabrication layers
+
+### Other steps in Design Flow
+
+1) Simulation for Verification:
+   - At various levels: logic level, switch level, circuit level
+2) Formal Verification:
+   - Used to verify the designs through formal techniques
+3) Testability analysis and Test Pattern Generation
+   - Required for testing the manufactured devices
+  
+
   
