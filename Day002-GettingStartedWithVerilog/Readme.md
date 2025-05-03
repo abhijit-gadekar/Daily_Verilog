@@ -69,8 +69,47 @@ Language), ISP (Integrated System Synthesis Procedure), and CUPL (Compiler for U
 - Some software tools for simulation: Icarus Verilog, GTKWave, Xilinx ISE, Xilinx Vivado, Modelsim
 - Some software tools for synthesis: Cadence XCelium, Xilinx Vivado, ModelSim, Xilinx ISE, Synopsys Tool Suite
 
-## 📝 2.6: ASIC vs FPGA
+## 📝 2.6: Various Design Styles
 
+1. Programmable Logic Devices
+   - FPGA
+   - Gate Array
+2. Standard cell (Semi-custom design)
+3. Full-custom Design
+
+- Which Design style to use?
+  - Tradeoff between several design parameters:
+      - Hardware cost
+      - Circuit delay
+      - Time required
+  - Optimizing these paramters is often conflicting
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/830326ed-72a2-4318-8b09-0e278818038f" width="500">
+</div>
+
+
+- ASIC vs FPGA
 <div align="center">
   <img src="https://github.com/user-attachments/assets/6aafbaee-5581-4d78-902e-06db2d37829d" width="600">
 </div>
+
+## 📝 2.7: VLSI Design Cycle
+
+- Since there are large number of devices, there are optimization requirements for high performance for time to market competition and cost competition.
+- Manual designs are out of question today, as we have VLSI automated CAD tools.
+- Steps:
+  1. System Specification
+  2. Functional design
+  3. Logic design
+  4. Circuit design
+  5. Physical design: Converts a circuit description into a geometric description. Basic steps:
+     1. Partitioning, Floorplanning, Placement
+     2. Routing
+     3. Static Timing Analysis
+     4. Signal Integrity and Crosstalk analysis
+     5. Physical verification and signoff
+  6. Design Verification
+  7. Fabrication
+  8. Packaging, Testing and Debugging
+     
