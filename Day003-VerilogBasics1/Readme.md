@@ -54,15 +54,15 @@
         ... 
         endmodule 
 
--E.g. of a 2-input AND gate Module
+- E.g. of a 2-input AND gate Module
 
-    module and_gate (
-        input a,
-        input b,
-        output y
-    );
-        assign y = a & b;
-    endmodule
+      module and_gate (
+          input a,
+          input b,
+          output y
+      );
+          assign y = a & b;
+      endmodule
     
 - Here,
   - module and_gate starts the module definition with the name and_gate
@@ -107,11 +107,11 @@
       assign y = a & b;
     endmodule
 
-Now we'll create another module called top_module and instantiate the and_gate inside it.
+- Now we'll create another module called top_module and instantiate the and_gate inside it.
 
-    module top_module;
-        // Declare wires to connect to the and_gate
-        wire x, z, result;
+      module top_module;
+          // Declare wires to connect to the and_gate
+          wire x, z, result;
 
         // Assign values to inputs for simulation purposes
         assign x = 1'b1;
@@ -123,7 +123,7 @@ Now we'll create another module called top_module and instantiate the and_gate i
           .b(z),
           .y(result)
         );
-    endmodule
+      endmodule
     
 - Illegal Module Nesting in Verilog
 
